@@ -1,0 +1,454 @@
+<!-- I declare that the lab work here submitted is original
+except for source material explicitly acknowledged,
+and that the same or closely related material has not been
+previously submitted for another course.
+I also acknowledge that I am aware of University policy and
+regulations on honesty in academic work, and of the disciplinary
+guidelines and procedures applicable to breaches of such
+policy and regulations, as contained in the website.
+University Guideline on Academic Honesty:
+https://www.cuhk.edu.hk/policy/academichonesty/
+Student Name : Wong San Ki Sunny
+Student ID : 1155193541
+Class/Section : CSCI2720
+Date : 22/10/2025 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="Web.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Festive&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="timer.js"></script>
+
+    <title>T1 Faker</title>
+</head>
+<body>
+    <header>
+        <h1>T1 Faker</h1>
+        <nav class="navbar">
+            <div class="logo">T1 Faker</div>
+          <!-- Button on Navbar  -->
+          <div class="nav-buttons">
+            <button class="btn" onclick="showSection('Home')"><i class="fas fa-home"></i> Home</button>
+            <button class="btn" onclick="showSection('Achievements')"><i class="fas fa-trophy"></i> Achievements</button>
+            <button class="btn" onclick="showSection('Comments')"><i class="fas fa-comments"></i> Comments</button>
+            <button class="btn toggle-btn" onclick="toggleExtraButtons()"> Show</button>
+          </div>
+        </nav>
+    </header>
+        <!-- extra buttons -->
+          <div id="extra-buttons-area" style="min-height: 60px; display: flex; justify-content: center; align-items: center;">
+            <div id="extra-buttons" style="display: none;">
+              <button class="btn" onclick="increaseFont()">Font Size +</button>
+              <button class="btn" onclick="decreaseFont()">Font Size -</button>
+              <button class="btn" onclick="addSpotlight()">Spotlight</button>
+              <button class="btn" onclick="showTimeModal()">Bootstrap</button>
+            </div>
+          </div>
+    
+    <main>
+
+        <!-- home section -->
+        <section id="Home">
+          <img id="faker-image" src="./images/faker.jpg"/>
+          <p> Faker, whose real name is Lee Sang-hyeok, is a legendary professional League of Legends player from South Korea.</p>
+          <p> He is widely considered one of the best players in the history of the game, known for his exceptional skill, strategic thinking, and </p>
+          <p> versatility in playing different champions. Faker has been a key player for T1 and has won multiple World Championships.</p>
+          <a id="more-info-link" href="https://en.wikipedia.org/wiki/Faker_(gamer)">More Info</a>
+        </section>
+
+        <!-- achievement section -->
+        <section id="Achievements" style="display: none;">
+
+          <div class="container mt-4">
+            <div class="row">
+              <div class="col-md-4" style="background: #ffd700; color: rgb(0, 0, 0); padding: 15px; text-align: center;">
+                <h4>5 x World Champion</h4>
+              </div>
+              <div class="col-md-4" style="background: #463576; color: #FFEB3B; padding: 15px; text-align: center;">
+                <h4>10 × LCK Champion</h4>
+              </div>
+              <div class="col-md-4" style="background: #db4646; color: rgb(255, 255, 255); padding: 15px; text-align: center;">
+                <h4>2 × MSI Champion</h4>
+              </div>
+            </div>
+          </div>
+
+          <div class="container mt-4">
+            <h3>Notable Achievements</h3>
+            <ul class="list-group">
+              <li class="list-group-item">FMVP of 2016 World Championship</li>
+              <li class="list-group-item">FMVP of 2024 World Championship</li>
+              <li class="list-group-item">First player induction into the Hall of Legends</li>
+              <li class="list-group-item">First player to complete the League of Legends Grand Slam</li>
+              <li class="list-group-item">Won the gold medal for South Korea in the League of Legends event at the Asian Games 2022</li>  
+
+            </ul>
+          </div>
+
+          <div class="container mt-4">
+            <h3>Detailed Record</h3>
+            <table class="table table-dark table-striped">
+              <thead>
+                <tr>
+                  <th>Year</th>
+                  <th>Tournament</th>
+                  <th>Result</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>2025</td>
+                  <td>World Championship</td>
+                  <td>TBD</td>
+                </tr>
+                <tr>
+                  <td>2025</td>
+                  <td>Mid-Season Invitational</td>
+                  <td>2nd</td>
+                </tr>
+                <tr>
+                  <td>2025</td>
+                  <td>LCK</td>
+                  <td>4th</td>
+                </tr>
+
+                <tr>
+                  <td>2024</td>
+                  <td>World Championship</td>
+                  <td class="champion-gold">Champion</td>
+                </tr>
+                <tr>
+                  <td>2024</td>
+                  <td>Mid-Season Invitational</td>
+                  <td>3rd</td>
+                </tr>
+                <tr>
+                  <td>2024</td>
+                  <td>LCK Summer</td>
+                  <td>3rd</td>
+                </tr>
+                <tr>
+                  <td>2024</td>
+                  <td>LCK Spring</td>
+                  <td>2nd</td>
+                </tr>
+
+                <tr>
+                  <td>2023</td>
+                  <td>World Championship</td>
+                  <td class="champion-gold">Champion</td>
+                </tr>
+                <tr>
+                  <td>2023</td>
+                  <td>Mid-Season Invitational</td>
+                  <td>3rd</td>
+                </tr>
+                <tr>
+                  <td>2023</td>
+                  <td>LCK Summer</td>
+                  <td>2nd</td>
+                </tr>
+                <tr>
+                  <td>2023</td>
+                  <td>LCK Spring</td>
+                  <td>2nd</td>
+                </tr>
+
+                <tr>
+                  <td>2022</td>
+                  <td>World Championship</td>
+                  <td>2nd</td>
+                </tr>
+                <tr>
+                  <td>2022</td>
+                  <td>Asian Games 2022</td>
+                  <td class="champion-gold">Gold Medal</td>
+                </tr>
+                <tr>
+                  <td>2022</td>
+                  <td>Mid-Season Invitational</td>
+                  <td>2nd</td>
+                </tr>
+                <tr>
+                  <td>2022</td>
+                  <td>LCK Summer</td>
+                  <td>2nd</td>
+                </tr>
+                <tr>
+                  <td>2022</td>
+                  <td>LCK Spring</td>
+                  <td class="champion-gold">Champion</td>
+                </tr>
+
+                <tr>
+                  <td>2021</td>
+                  <td>World Championship</td>
+                  <td>Semi-finalist</td>
+                </tr>
+                <tr>
+                  <td>2021</td>
+                  <td>Mid-Season Invitational</td>
+                  <td>Did not qualify</td>
+                </tr>
+                <tr>
+                  <td>2021</td>
+                  <td>LCK Summer</td>
+                  <td>2nd</td>
+                </tr>
+                <tr>
+                  <td>2021</td>
+                  <td>LCK Spring</td>
+                  <td>4th</td>
+                </tr>
+
+                <tr>
+                  <td>2020</td>
+                  <td>World Championship</td>
+                  <td>Did not qualify</td>
+                </tr>
+                <tr>
+                  <td>2020</td>
+                  <td>Mid-Season Invitational</td>
+                  <td>None held due to COVID</td>
+                </tr>
+                <tr>
+                  <td>2020</td>
+                  <td>LCK Summer</td>
+                  <td>5th</td>
+                </tr>
+                <tr>
+                  <td>2020</td>
+                  <td>LCK Spring</td>
+                  <td class="champion-gold">Champion</td>
+                </tr>
+
+                <tr>
+                  <td>2019</td>
+                  <td>World Championship</td>
+                  <td>Semi-finalist</td>
+                </tr>
+                <tr>
+                  <td>2019</td>
+                  <td>Mid-Season Invitational</td>
+                  <td>Semi-finalist</td>
+                </tr>
+                <tr>
+                  <td>2019</td>
+                  <td>LCK Summer</td>
+                  <td class="champion-gold">Champion</td>
+                </tr>
+                <tr>
+                  <td>2019</td>
+                  <td>LCK Spring</td>
+                  <td class="champion-gold">Champion</td>
+                </tr>
+
+                <tr>
+                  <td>2018</td>
+                  <td>World Championship</td>
+                  <td>Did not qualify</td>
+                </tr>
+                <tr>
+                  <td>2018</td>
+                  <td>Asian Games 2018</td>
+                  <td>Silver Medal</td>
+                </tr>
+                <tr>
+                  <td>2018</td>
+                  <td>Mid-Season Invitational</td>
+                  <td>Did not qualify</td>
+                </tr>
+                <tr>
+                  <td>2018</td>
+                  <td>LCK Summer</td>
+                  <td>7th</td>
+                </tr>
+                <tr>
+                  <td>2018</td>
+                  <td>LCK Spring</td>
+                  <td>4th</td>
+                </tr>
+
+                <tr>
+                  <td>2017</td>
+                  <td>World Championship</td>
+                  <td>2nd</td>
+                </tr>
+                <tr>
+                  <td>2017</td>
+                  <td>Mid-Season Invitational</td>
+                  <td class="champion-gold">Champion</td>
+                </tr>
+                <tr>
+                  <td>2017</td>
+                  <td>LCK Summer</td>
+                  <td>2nd</td>
+                </tr>
+                <tr>
+                  <td>2017</td>
+                  <td>LCK Spring</td>
+                  <td class="champion-gold">Champion</td>
+                </tr>
+
+                <tr>
+                  <td>2016</td>
+                  <td>World Championship</td>
+                  <td class="champion-gold">Champion</td>
+                </tr>
+                <tr>
+                  <td>2016</td>
+                  <td>Mid-Season Invitational</td>
+                  <td class="champion-gold">Champion</td>
+                </tr>
+                <tr>
+                  <td>2016</td>
+                  <td>LCK Summer</td>
+                  <td>3rd</td>
+                </tr>
+                <tr>
+                  <td>2016</td>
+                  <td>LCK Spring</td>
+                  <td class="champion-gold">Champion</td>
+                </tr>
+
+                <tr>
+                  <td>2015</td>
+                  <td>World Championship</td>
+                  <td class="champion-gold">Champion</td>
+                </tr>
+                <tr>
+                  <td>2015</td>
+                  <td>Mid-Season Invitational</td>
+                  <td>2nd</td>
+                </tr>
+                <tr>
+                  <td>2015</td>
+                  <td>LCK Summer</td>
+                  <td class="champion-gold">Champion</td>
+                </tr>
+                <tr>
+                  <td>2015</td>
+                  <td>LCK Spring</td>
+                  <td class="champion-gold">Champion</td>
+                </tr>
+
+                <tr>
+                  <td>2014</td>
+                  <td>World Championship</td>
+                  <td>Did not qualify</td>
+                </tr>
+                <tr>
+                  <td>2014</td>
+                  <td>LCK Summer</td>
+                  <td>5th-8th</td>
+                </tr>
+                <tr>
+                  <td>2014</td>
+                  <td>LCK Spring</td>
+                  <td>5th-8th</td>
+                </tr>
+                <tr>
+                  <td>2013-2014</td>
+                  <td>LCK Winter</td>
+                  <td class="champion-gold">Champion</td>
+                </tr>
+                <tr>
+                  <td>2013</td>
+                  <td>World Championship</td>
+                  <td class="champion-gold">Champion</td>
+                </tr>
+                <tr>
+                  <td>2013</td>
+                  <td>LCK Summer</td>
+                  <td class="champion-gold">Champion</td>
+                </tr>
+                <tr>
+                  <td>2013</td>
+                  <td>LCK Spring</td>
+                  <td>3rd</td>
+                </tr>
+
+                
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- comments section -->
+        <section id="Comments" style="display: none;">
+          <form id="commentForm" class="container mt-4">
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="email" placeholder="name@example.com">
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Color:</label>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="color" value="red">
+                <label class="form-check-label">Red</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="color" value="green">
+                <label class="form-check-label">Green</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="color" value="yellow">
+                <label class="form-check-label">Yellow</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="color" value="blue">
+                <label class="form-check-label">Blue</label>
+              </div>
+            </div>
+            <div class="mb-3">
+              <textarea id="comment" class="form-control" placeholder="Your comment" rows="4"></textarea>
+            </div>
+          <button type="button" class="btn btn-primary" onclick="addComment()">Add Comment</button>
+          </form>
+  
+          <div id="commentsList" class="container mt-4">
+          </div>
+        </section>
+
+        <!-- Spotlight area -->
+        <aside id="spotlight-section">
+          <h3>🔦 Spotlight</h3>
+          <div id="spotlight-area">
+          </div>
+        </aside>
+    </main>
+    
+    <footer>
+      <div id="stay-timer">Duration of Stay: 00:00:00</div>
+    </footer>
+
+    <!-- Bootstrap Modal window -->
+    <div class="modal fade" id="timeModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Clock</h5>
+          </div>
+          <div class="modal-body">
+            <p>Current Time: <span id="currentTime"></span></p>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+</body>
+</html>
