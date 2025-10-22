@@ -120,7 +120,7 @@ function validateEmail(email) {
 //Load Comments
 async function loadComments(){
     try {
-    const response = await fetch('/comments.json');
+    const response = await fetch('./comments.json');
     return await response.json();
     } catch (error) {
         return [];
@@ -135,7 +135,7 @@ document.addEventListener('DOMContentLoaded', function() {
 //Save Comments
 async function saveComments(comments) {
   try {
-    await fetch('/comments.json', {
+    await fetch('./comments.json', {
       method: 'PUT',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(comments)
@@ -143,4 +143,5 @@ async function saveComments(comments) {
   } catch (error) {
     localStorage.setItem('comments', JSON.stringify(comments));
   }
+
 }
